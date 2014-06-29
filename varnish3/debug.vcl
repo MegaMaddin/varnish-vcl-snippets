@@ -1,5 +1,5 @@
 sub vcl_recv {
-    set req.X-Debug-ID = 1ec1263ef37ff4c31edddd9e657cd96b68b9eebf;
+    set req.X-Debug-ID = "1ec1263ef37ff4c31edddd9e657cd96b68b9eebf";
     if (req.restarts > 0) {
             if (req.http.X-Debug-Trace) {
                 set req.http.X-Debug-Trace = req.http.X-Debug-Trace + ", vcl_restart";
